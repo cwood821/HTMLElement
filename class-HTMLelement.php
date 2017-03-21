@@ -2,7 +2,7 @@
 /*
   HTML Element Class
   Author: Christian Wood
-  Note: Pass attributes as an array, pass inline style as an array, also.
+  Website: christianwood.net
 */
 
 /**************************************************************
@@ -30,6 +30,21 @@ class HTMLElement {
 
     public function get_innerHTML() {
       return $this->innerHTML;
+    }
+
+
+    public function set_tag( $newTag ) {
+        $this->tag = $newTag;
+    }
+
+
+    public function set_atts( $newAtts ) {
+      $this->atts = $newAtts;
+    }
+
+
+    public function set_innerHTML( $newInnerHTML ) {
+      $this->innerHTML = $newInnerHTML;
     }
 
 
