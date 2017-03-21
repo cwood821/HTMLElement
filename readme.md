@@ -15,7 +15,7 @@ object HTMLElement ( string $tag , array $attributes, string $innerHTML )
 
 ## Examples
 
-Create a link to a WordPress post. This example assumes a WordPress post object is available as $post.
+Create a link to a WordPress post. This example assumes that the HTMLElement class has been included in this script and that a WordPress post object is available as $post.
 
 ```php
 // Set up the attributes for the anchor tag
@@ -57,4 +57,7 @@ $atts = array(
 	  'font-weight' => 'bold'
   )
 );
+
+$postTitle = new HTMLElement( 'p', $atts, $post->post_title );
+
 ```
