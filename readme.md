@@ -3,7 +3,7 @@ The HTMLElement class provides a simple way to dynamically create and use HTML e
 
 ## Usage
 
-1. [Include](http://php.net/manual/en/function.include.php) or [Require](http://php.net/manual/en/function.require.php) the file in your PHP script.
+1. 1. [Include](http://php.net/manual/en/function.include.php) or [Require](http://php.net/manual/en/function.require.php) the file in your PHP script.
 2. Instantiate a new HTMLElement object with three parameters:
 - $tag: A string, the HTML tag to created.
 - $attributes: A key=>value array, the attributes that the HTML tag will have.
@@ -46,6 +46,7 @@ $postLink->get_innerHTML();
 $postLink->set_tag( $newTag );
 $postLink->set_atts( $newAtts );
 $postLink->set_innerHTML( $newInnerHTML );
+
 ```
 
 ## Notes
@@ -58,6 +59,4 @@ $atts = array(
 	  'font-weight' => 'bold'
   )
 );
-
-$postLink = new HTMLElement( 'p', $atts, $post->post_title );
 ```
