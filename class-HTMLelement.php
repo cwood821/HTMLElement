@@ -19,7 +19,7 @@ class HTMLElement {
 
 
     public function get_tag() {
-        return $this->tag;
+      return $this->tag;
     }
 
 
@@ -34,7 +34,7 @@ class HTMLElement {
 
 
     public function set_tag( $newTag ) {
-        $this->tag = $newTag;
+      $this->tag = $newTag;
     }
 
 

@@ -10,9 +10,7 @@ The HTMLElement class provides a simple way to dynamically create and use HTML e
 - $innerHTML: A string, the inner value of the HTML tag.
 
 ```php
-
 object HTMLElement ( string $tag , array $attributes, string $innerHTML )
-
 ```
 
 ## Examples
@@ -34,7 +32,7 @@ echo $postLink->get_element();
 
 ```
 
-Getters and Setters are also available for individual element properties.
+Getters and Setters are also available for individual object properties.
 
 ```php
 // Getters
