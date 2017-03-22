@@ -32,6 +32,19 @@ echo $postLink->get_element();
 
 ```
 
+Inline CSS style should be passed as a sub-array in the attributes array. The class will automatically format style attributes appropriately.
+```php
+// Create paragraph tag with bold styling.
+$atts = array(
+  'style' => array(
+	  'font-weight' => 'bold'
+  )
+);
+
+$postTitle = new HTMLElement( 'p', $atts, $post->post_title );
+
+```
+
 Getters and Setters are available for individual object properties.
 
 ```php
@@ -65,19 +78,6 @@ $postLink->add_att( $theAtt, $someValue );
 // Remove an attribute from the object
 // Takes a string for a the attribute to remove
 $postLink->remove_att( $theAtt );
-```
-
-Inline CSS style should be passed as a sub-array in the attributes array. The class will automatically format style attributes appropriately.
-```php
-// Create paragraph tag with bold styling.
-$atts = array(
-  'style' => array(
-	  'font-weight' => 'bold'
-  )
-);
-
-$postTitle = new HTMLElement( 'p', $atts, $post->post_title );
-
 ```
 
 ## Notes
