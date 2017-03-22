@@ -13,7 +13,7 @@ The HTMLElement class provides a simple way to dynamically create and use HTML e
 object HTMLElement ( string $tag , array $attributes, string $innerHTML )
 ```
 
-## Examples
+## Examples & Functionality
 
 Create a link to a WordPress post. This example assumes that the HTMLElement class has been included in this script and that a WordPress post object is available as $post.
 
@@ -32,7 +32,7 @@ echo $postLink->get_element();
 
 ```
 
-Getters and Setters are also available for individual object properties.
+Getters and Setters are available for individual object properties.
 
 ```php
 // Getters
@@ -45,6 +45,26 @@ $postLink->set_tag( $newTag );
 $postLink->set_atts( $newAtts );
 $postLink->set_innerHTML( $newInnerHTML );
 
+```
+
+Helper functions specific to the addition, removal, and manipulation of attributes are also available.
+
+```php
+// Check for existence of an attribute
+// Takes string of attribute, returns a boolean value
+$postLink->has_att( $theAtt );
+
+// Set the value of an existing attribute
+// Takes the string of existing attribute and a new value for it.
+$postLink->set_att( $theAtt, $newValue );
+
+// Add a new attribute to the object
+// Takes a string for a new attribute and a value attribute.
+$postLink->add_att( $theAtt, $someValue );
+
+// Remove an attribute from the object
+// Takes a string for a the attribute to remove
+$postLink->remove_att( $theAtt );
 ```
 
 ## Notes
