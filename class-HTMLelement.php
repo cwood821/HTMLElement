@@ -48,6 +48,48 @@ class HTMLElement {
     }
 
 
+    /*
+      Advanced HTML attribute functionality
+    */
+
+    public function has_att( $att ) {
+      return array_key_exists( $att, $this->atts );
+    }
+
+
+    // Set the value of a specific object attribute
+    // if that attribute exists; if not, return null.
+    public function set_att( $att, $value ) {
+      // Confirm that the object has the attribute
+      if ( $this->has_att( $att ) ) {
+        $this->atts[$att] = $value;
+      } else {
+        return NULL;
+      }
+    }
+
+
+    public function add_att( $att, $value ) {
+      // If the object has the attribute already, return null
+      if ( $this->has_att( $att ) ) {
+        return NULL;
+      } else {
+        // Create the new attribute array item
+        $this->atts[$att] = $value;
+      }
+    }
+
+
+    public function remove_att( $att ) {
+      // If the object has the attribute, remove it
+      if ( $this->has_att( $att ) ) {
+        unset($this->atts[$att]);
+      } else {
+        return NULL;
+      }
+    }
+
+
     // Returns HTML tag with attributes and innerHTML as string
     public function get_element(){
       //Open tag
