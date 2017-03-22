@@ -67,9 +67,7 @@ $postLink->add_att( $theAtt, $someValue );
 $postLink->remove_att( $theAtt );
 ```
 
-## Notes
-- The class handles [void html elements](https://www.w3.org/TR/html/syntax.html#void-elements). These tags will not be closed and will not have innerHTML.
-- Inline CSS style should be passed as a sub-array in the attributes array. The class will automatically format style attributes appropriately.
+Inline CSS style should be passed as a sub-array in the attributes array. The class will automatically format style attributes appropriately.
 ```php
 // Create paragraph tag with bold styling.
 $atts = array(
@@ -81,3 +79,6 @@ $atts = array(
 $postTitle = new HTMLElement( 'p', $atts, $post->post_title );
 
 ```
+
+## Notes
+- The class handles [void html elements](https://www.w3.org/TR/html/syntax.html#void-elements). These tags will not be closed and will not have innerHTML.
